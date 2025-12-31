@@ -122,6 +122,7 @@ Since this was a **Class 12 project**, it has some known limitations:
 * Minimal input validation
 * Basic UI design
 * Large single-file codebase
+* The actual logic and functionality of the app is minimal
 
 These limitations reflect my **learning stage at the time**.
 
@@ -145,6 +146,7 @@ These limitations reflect my **learning stage at the time**.
 * Improved UI/UX design
 * Input validation and error handling
 * Refactoring into modules and classes
+* Make the app actually functioning
 
 ---
 
