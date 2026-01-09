@@ -317,7 +317,7 @@ def sub():
 
 #homepages-------------------------------------------------------------
 
-  
+
 def homepage():
     new_window1 = tkinter.Toplevel()
     new_window1.geometry("1000x900")
