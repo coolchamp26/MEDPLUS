@@ -66,12 +66,17 @@ class BaseFrame(tk.Frame):
 
     def add_background(self, image_path):
         """Adds a responsive background image to the frame."""
-        # Find absolute path if not provided
+        # Find path relative to this file or project root
         if not os.path.isabs(image_path):
-            # Assuming images are in project root relative to execution or known location
-            # Try project root
-            base_dir = os.getcwd() # Or use a more robust path finding strategy
-            full_path = os.path.join(base_dir, image_path)
+            # Try to find the project root (where medplus folder or main.py sits)
+            # This file is in medplus/ui/base.py
+            current_file_dir = os.path.dirname(os.path.abspath(__file__))
+            project_root = os.path.dirname(os.path.dirname(current_file_dir))
+            full_path = os.path.join(project_root, image_path)
+            
+            # Fallback to CWD if not found in project root
+            if not os.path.exists(full_path):
+                full_path = os.path.join(os.getcwd(), image_path)
         else:
             full_path = image_path
 

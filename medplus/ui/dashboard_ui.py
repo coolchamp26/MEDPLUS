@@ -61,7 +61,7 @@ class AdminDashboardFrame(BaseFrame):
         super().__init__(master)
         self.username = username
         
-        self.add_background("pills.png")
+        self.add_background("hospital_reception_bg.png")
         
         # Header
         header = ttk.Frame(self, padding=10, style='Card.TFrame')
